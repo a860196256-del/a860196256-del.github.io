@@ -1,1 +1,79 @@
-
+/* ==========================================
+   VARIABLES Y CONFIGURACIÓN BASE
+   ========================================== */
+:root {
+    --primary-color: #2b7a78;
+    --secondary-color: #3aafa9;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+    --text-color: #2b2d42;
+    --gray-text: #6c757d;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: var(--font-main);
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+ 
+/* ==========================================
+   NAVEGACIÓN RESPONSIVA (MENÚ)
+   ========================================== */
+.navbar {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    sticky: top;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+ 
+.logo {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+ 
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+ 
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+ 
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+}
+ 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.3rem;
+}
+ 
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    border-radius: 2px;
+}
+ 
